@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "teste-template-spec"
+  description: "Artifacts generator via Spec."
+  annotations:
+    github.com/project-slug: sjflausino/teste-template-spec
+    backstage.io/techdocs-ref: dir:..
+    github.com/workflows: publish.yml,remove.yml
+    kong-manager/service-name: app.teste-template-spec.80
+    kong-manager/instance: cluster-vkdr-local   
+spec:
+  type: devops
+  lifecycle: experimental
+  owner: "group:default/admin"
+  providesApis:
+    - teste-template-spec
